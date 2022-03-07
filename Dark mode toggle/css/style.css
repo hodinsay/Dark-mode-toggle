@@ -1,0 +1,70 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+body {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     min-height: 100vh;
+     margin: 0;
+     transition: background 0.3s linear, color 0.3s linear;
+}
+
+.toggleContainer {
+     position: fixed;
+     top: 10px;
+     right: 10px;
+}
+
+label {
+     background-color: #1f1f1f;
+     border-radius: 50%;
+     display: inline-block;
+     width: 50px;
+     height: 50px;
+     cursor: pointer;
+     user-select: none;
+     transition: background 0.3s linear;
+}
+
+input {
+     visibility: hidden;
+}
+
+.dark {
+     color: white;
+}
+
+body.dark {
+     background-color: #1f1f1f;
+     color: white;
+ }
+
+body.dark .light{
+     color: #1B1E23;
+}
+
+body.dark label {
+     background-color: white;
+}
+
